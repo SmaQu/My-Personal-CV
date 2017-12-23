@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/image_view_card_view_item"
+            android:id="@+id/image_view_card_view_item_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -22,18 +22,18 @@
             tools:ignore="ContentDescription" />
 
         <TextView
+            android:id="@+id/text_view_card_view_item_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/image_view_card_view_item"
+            android:layout_below="@+id/image_view_card_view_item_image"
+            android:fontFamily="casual"
+            android:lines="2"
+            android:maxLines="2"
             android:paddingBottom="15dp"
             android:paddingEnd="21dp"
             android:paddingStart="21dp"
             android:paddingTop="15dp"
-            android:fontFamily="casual"
-            android:textColor="@android:color/black"
-            android:text="Wykształcenie" />
-
+            android:text="Wykształcenie"
+            android:textColor="@android:color/black" />
     </RelativeLayout>
-
-
 </android.support.v7.widget.CardView>

@@ -20,11 +20,11 @@ import java.util.List;
 public class CardViewAdapterMainActivity extends RecyclerView.Adapter{
 
     private final Context context;
-    private final List<CardViewItem> listOfCardViewItems;
+    private final List<CardViewItem> listOfElements;
 
-    public CardViewAdapterMainActivity(Context context, List<CardViewItem> listOfCardViewItems) {
+    public CardViewAdapterMainActivity(Context context, List<CardViewItem> listOfElements) {
         this.context = context;
-        this.listOfCardViewItems = listOfCardViewItems;
+        this.listOfElements = listOfElements;
     }
 
     @Override
@@ -35,14 +35,14 @@ public class CardViewAdapterMainActivity extends RecyclerView.Adapter{
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        CardViewItem cardViewItem = listOfCardViewItems.get(position);
-        ((MyViewHolder) holder).image.setImageResource(cardViewItem.getImage());
+        CardViewItem cardViewItem = listOfElements.get(position);
+        ((MyViewHolder) holder).image.setImageResource(context.getResources().getIdentifier(cardViewItem.getImage(),"drawable",context.getPackageName()));
         ((MyViewHolder) holder).description.setText(cardViewItem.getDescription());
     }
 
     @Override
     public int getItemCount() {
-        return listOfCardViewItems.size();
+        return listOfElements.size();
     }
 
     private class MyViewHolder extends RecyclerView.ViewHolder {

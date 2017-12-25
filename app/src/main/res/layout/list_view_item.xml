@@ -38,5 +38,16 @@
         android:layout_alignStart="@+id/image_view_list_view_item_icon"
         android:layout_below="@+id/image_view_list_view_item_icon"
         android:padding="8dp"
-        android:text="Textasdasd asd asd asd asd asd asd asd asd asd asd asd a das ds ad asd asd asdasdasdasdasdasd asdasdasd asdasdasd asdsdsakdasf asdheksaduas djasdas0daksd asdjas dajsdnasd ajsd asdja dajsdaskdansdkasdnaskdnaskdasndaks  jkasdjdkasdja askd asdk aView" />
+        android:text="Textasdasd asd asd asd asd asd asd asd asd asd asd asd a dasds ad asd asd asdasdasdasdasdasd asdasdasd asdasdasd asdsdsakdasf asdheksaduas djasdas0daksd asdjas dajsdnasd ajsd asdja dajsdaskdansdkasdnaskdnaskdasndaks  jkasdjdkasdja askd asdk aView" />
+
+    <TextView
+        android:id="@+id/text_view_list_view_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/text_view_list_view_item_info"
+        android:padding="8dp"
+        android:text="20.12.2017" />
+
+
 </RelativeLayout>

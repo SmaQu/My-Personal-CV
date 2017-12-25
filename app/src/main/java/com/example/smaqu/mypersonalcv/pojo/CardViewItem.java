@@ -7,14 +7,14 @@ import java.util.List;
  */
 
 public class CardViewItem {
-    private int image;
+    private String image;
     private String description;
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
@@ -25,14 +25,4 @@ public class CardViewItem {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public List<DetailListViewItem> getCardViewDetailListView() {
-        return cardViewDetailListView;
-    }
-
-    public void setCardViewDetailListView(List<DetailListViewItem> cardViewDetailListView) {
-        this.cardViewDetailListView = cardViewDetailListView;
-    }
-
-    private List<DetailListViewItem> cardViewDetailListView;
 }

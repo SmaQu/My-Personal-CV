@@ -7,8 +7,8 @@ package com.example.smaqu.mypersonalcv.pojo;
 public class DetailListViewItem {
     private String cardViewId;
     private String topic;
-    private int ico;
-    private String details;
+    private String ico;
+    private String info;
     private String date;
 
     public String getCardViewId() {
@@ -27,20 +27,20 @@ public class DetailListViewItem {
         this.topic = topic;
     }
 
-    public int getIco() {
+    public String getIco() {
         return ico;
     }
 
-    public void setIco(int ico) {
+    public void setIco(String ico) {
         this.ico = ico;
     }
 
-    public String getDetails() {
-        return details;
+    public String getInfo() {
+        return info;
     }
 
-    public void setDetails(String details) {
-        this.details = details;
+    public void setInfo(String info) {
+        this.info = info;
     }
 
     public String getDate() {

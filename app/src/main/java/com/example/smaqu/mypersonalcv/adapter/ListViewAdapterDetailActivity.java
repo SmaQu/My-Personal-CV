@@ -68,7 +68,7 @@ public class ListViewAdapterDetailActivity extends BaseAdapter {
         TextView info;
         TextView date;
 
-        public ViewHolder(View view) {
+        ViewHolder(View view) {
             imageView = view.findViewById(R.id.image_view_list_view_item_icon);
             topic = view.findViewById(R.id.text_view_list_view_item_topic);
             info = view.findViewById(R.id.text_view_list_view_item_info);

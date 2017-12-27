@@ -46,10 +46,10 @@ public class CardViewAdapterMainActivity extends RecyclerView.Adapter{
     }
 
     private class MyViewHolder extends RecyclerView.ViewHolder {
-        public ImageView image;
-        public TextView description;
+        ImageView image;
+        TextView description;
 
-        public MyViewHolder(View itemView) {
+        MyViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image_view_card_view_item_image);
             description = itemView.findViewById(R.id.text_view_card_view_item_desc);

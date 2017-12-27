@@ -5,18 +5,18 @@ package com.example.smaqu.mypersonalcv.pojo;
  */
 
 public class DetailListViewItem {
-    private String cardViewId;
+    private String cardViewDescription;
     private String topic;
     private String ico;
     private String info;
     private String date;
 
-    public String getCardViewId() {
-        return cardViewId;
+    public String getCardViewDescription() {
+        return cardViewDescription;
     }
 
-    public void setCardViewId(String cardViewId) {
-        this.cardViewId = cardViewId;
+    public void setCardViewDescription(String cardViewDescription) {
+        this.cardViewDescription = cardViewDescription;
     }
 
     public String getTopic() {

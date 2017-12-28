@@ -37,7 +37,8 @@ public class MainPresenter implements MainPresenterInterface, CardViewAdapterMai
 
     @Override
     public void createAdapter() {
-        CardViewAdapterMainActivity adapter = new CardViewAdapterMainActivity((Context)mainView,cardViewItemList);
+        CardViewAdapterMainActivity adapter = new CardViewAdapterMainActivity(cardViewItemList);
+        adapter.setOnItemCallback(this);
         mainView.createRecyclerView(adapter);
     }
 
@@ -49,14 +50,13 @@ public class MainPresenter implements MainPresenterInterface, CardViewAdapterMai
     }
 
     @Override
-    public void onItemClick(Context context, View view, int p) {
-        Log.e("abc","Hello" );
+    public void onItemClick( View view, int p) {
         CardViewItem cardViewItem = cardViewItemList.get(p);
-        Intent intent = new Intent(context, DetailActivity.class);
+        Intent intent = new Intent(view.getContext(), DetailActivity.class);
 
         Bundle bundle = new Bundle();
         bundle.putString(BUNDLE_DESCRIPTION, cardViewItem.getDescription());
         intent.putExtra(BUNDLE_EXTRAS,bundle);
-        context.startActivity(intent);
+        view.getContext().startActivity(intent);
     }
 }

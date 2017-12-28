@@ -20,17 +20,19 @@ import java.util.List;
 
 public class CardViewAdapterMainActivity extends RecyclerView.Adapter{
 
-    private final Context context;
     private OnClickCallback onClickCallback;
     private final List<CardViewItem> listOfElements;
 
-    public interface OnClickCallback {
-        void onItemClick(Context context, View view, int p);
+    public CardViewAdapterMainActivity(List<CardViewItem> listOfElements) {
+        this.listOfElements = listOfElements;
     }
 
-    public CardViewAdapterMainActivity(Context context, List<CardViewItem> listOfElements) {
-        this.context = context;
-        this.listOfElements = listOfElements;
+    public interface OnClickCallback {
+        void onItemClick(View view, int p);
+    }
+
+    public void setOnItemCallback(final OnClickCallback onItemCallback) {
+        this.onClickCallback = onItemCallback;
     }
 
     @Override
@@ -55,17 +57,19 @@ public class CardViewAdapterMainActivity extends RecyclerView.Adapter{
     private class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView image;
         TextView description;
+        View container;
 
         MyViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image_view_card_view_item_image);
             description = itemView.findViewById(R.id.text_view_card_view_item_desc);
+            container = itemView.findViewById(R.id.card_view_item);
+            container.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            Log.e("abc","Hello" );
-            onClickCallback.onItemClick(context, view, getAdapterPosition());
+            onClickCallback.onItemClick(view, getAdapterPosition());
         }
     }
 

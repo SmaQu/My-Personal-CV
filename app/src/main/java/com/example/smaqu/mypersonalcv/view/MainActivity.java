@@ -4,16 +4,21 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.smaqu.mypersonalcv.R;
+import com.example.smaqu.mypersonalcv.adapter.CardViewAdapterMainActivity;
 import com.example.smaqu.mypersonalcv.presenter.MainPresenter;
 
-public class MainActivity extends AppCompatActivity implements MainActivityInterface {
+public class MainActivity extends AppCompatActivity implements MainActivityInterface{
+
+    private RecyclerView recyclerView;
+    private MainPresenter mainPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +27,24 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        MainPresenter mainPresenter = new MainPresenter(this);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               mainPresenter.openDialer(view.getContext());
+            }
+        });
 
+        mainPresenter = new MainPresenter(this);
+        mainPresenter.createAdapter();
+    }
+
+    @Override
+    public void createRecyclerView(CardViewAdapterMainActivity cardViewAdapterMainActivity) {
+        recyclerView = findViewById(R.id.recycler_view_content_main);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(cardViewAdapterMainActivity);
     }
 
     @Override

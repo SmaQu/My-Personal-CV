@@ -28,9 +28,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private SQLiteDatabase sqLiteDatabase;
 
     public static final String TAG = "database_helper";
-    public static final String DB_NAME = "datas.db";
-    public final String DB_PATH;
-    public static final int DB_VERSION = 1;
+    private static final String DB_NAME = "datas.db";
+    private final String DB_PATH;
+    private static final int DB_VERSION = 1;
 
     public static final String DB_CARD_TABLE = "card_view_data";
     public static final String DB_LIST_TABLE = "list_view_data";
@@ -65,9 +65,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public List<CardViewItem> getCardViewList() throws SQLException {
+    public List<CardViewItem> getCardViewList(){
         List<CardViewItem> cardViewItemList = new ArrayList<>();
-        openDatabase();
+        try {
+            openDatabase();
+        } catch (SQLException e) {
+            Log.e(TAG,"Cannot open database!");
+            e.printStackTrace();
+        }
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + DB_CARD_TABLE,null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()) {
@@ -82,9 +87,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cardViewItemList;
     }
 
-    public List<DetailListViewItem> getListViewList(String cardViewDescription) throws SQLException {
+    public List<DetailListViewItem> getListViewList(String cardViewDescription){
         List<DetailListViewItem> listViewItemList = new ArrayList<>();
-        openDatabase();
+        try {
+            openDatabase();
+        } catch (SQLException e) {
+            Log.e(TAG,"Cannot open database!");
+            e.printStackTrace();
+        }
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+ DB_LIST_TABLE + " WHERE " + KEY_LIST_VIEW_TABLE_CARD_VIEW_DESCRIPTION + " == " + cardViewDescription,null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()) {

@@ -3,8 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.smaqu.mypersonalcv.view.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_about_me"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/action_about_me"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about_application"
+        android:orderInCategory="101"
+        android:title="@string/action_about_application"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_license"
+        android:orderInCategory="102"
+        android:title="@string/action_license"
         app:showAsAction="never" />
 </menu>

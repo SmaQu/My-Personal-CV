@@ -43,7 +43,7 @@ public class CardViewAdapterMainActivity extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         CardViewItem cardViewItem = listOfElements.get(position);
         //((MyViewHolder) holder).image.setImageResource(context.getResources().getIdentifier(cardViewItem.getImage(),"drawable",context.getPackageName()));
-        ((MyViewHolder) holder).image.setImageResource(R.drawable.testing_photo);
+        ((MyViewHolder) holder).image.setImageResource(R.drawable.testing_photo2);
         ((MyViewHolder) holder).description.setText(cardViewItem.getDescription());
     }
 

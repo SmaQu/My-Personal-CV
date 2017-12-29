@@ -22,7 +22,10 @@
         <activity
             android:name=".view.DetailActivity"
             android:label="@string/title_activity_detail"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.AboutMeActivity" />
+        <activity android:name=".view.AboutApplicationActivity" />
+        <activity android:name=".view.LicenseActivity"></activity>
     </application>
 
 </manifest>

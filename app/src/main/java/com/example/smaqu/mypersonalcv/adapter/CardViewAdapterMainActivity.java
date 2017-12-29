@@ -1,8 +1,6 @@
 package com.example.smaqu.mypersonalcv.adapter;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +16,7 @@ import java.util.List;
  * Created by SmaQu on 2017-12-22.
  */
 
-public class CardViewAdapterMainActivity extends RecyclerView.Adapter{
+public class CardViewAdapterMainActivity extends RecyclerView.Adapter {
 
     private OnClickCallback onClickCallback;
     private final List<CardViewItem> listOfElements;
@@ -37,7 +35,7 @@ public class CardViewAdapterMainActivity extends RecyclerView.Adapter{
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_item, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_item, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -54,7 +52,7 @@ public class CardViewAdapterMainActivity extends RecyclerView.Adapter{
         return listOfElements.size();
     }
 
-    private class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    private class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView image;
         TextView description;
         View container;

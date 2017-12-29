@@ -2,7 +2,6 @@ package com.example.smaqu.mypersonalcv.view;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,9 +14,8 @@ import com.example.smaqu.mypersonalcv.R;
 import com.example.smaqu.mypersonalcv.adapter.CardViewAdapterMainActivity;
 import com.example.smaqu.mypersonalcv.presenter.MainPresenter;
 
-public class MainActivity extends AppCompatActivity implements MainActivityInterface{
+public class MainActivity extends AppCompatActivity implements MainActivityInterface {
 
-    private RecyclerView recyclerView;
     private MainPresenter mainPresenter;
 
     @Override
@@ -31,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               mainPresenter.openDialer(view.getContext());
+                mainPresenter.openDialer(view.getContext());
             }
         });
 
@@ -41,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
 
     @Override
     public void createRecyclerView(CardViewAdapterMainActivity cardViewAdapterMainActivity) {
-        recyclerView = findViewById(R.id.recycler_view_content_main);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view_content_main);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(cardViewAdapterMainActivity);

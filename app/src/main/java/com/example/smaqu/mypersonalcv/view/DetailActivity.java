@@ -6,10 +6,17 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ListView;
 
 import com.example.smaqu.mypersonalcv.R;
+import com.example.smaqu.mypersonalcv.adapter.ListViewAdapterDetailActivity;
+import com.example.smaqu.mypersonalcv.presenter.DetailPresenter;
 
-public class DetailActivity extends AppCompatActivity {
+import static com.example.smaqu.mypersonalcv.presenter.MainPresenter.BUNDLE_EXTRAS;
+
+public class DetailActivity extends AppCompatActivity implements DetailActivityInterface {
+
+    private DetailPresenter detailPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +29,17 @@ public class DetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                detailPresenter.openDialer(view.getContext());
             }
         });
+
+        detailPresenter = new DetailPresenter(this);
+        detailPresenter.createAdapter(this,getIntent().getBundleExtra(BUNDLE_EXTRAS));
     }
 
+    @Override
+    public void createListView(ListViewAdapterDetailActivity listViewAdapterDetailActivity) {
+        ListView listView = findViewById(R.id.list_view_content_main);
+        listView.setAdapter(listViewAdapterDetailActivity);
+    }
 }

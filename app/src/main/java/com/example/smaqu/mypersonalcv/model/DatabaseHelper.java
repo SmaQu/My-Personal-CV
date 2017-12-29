@@ -95,7 +95,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.e(TAG,"Cannot open database!");
             e.printStackTrace();
         }
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+ DB_LIST_TABLE + " WHERE " + KEY_LIST_VIEW_TABLE_CARD_VIEW_DESCRIPTION + " == " + cardViewDescription,null);
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+ DB_LIST_TABLE + " WHERE " + KEY_LIST_VIEW_TABLE_CARD_VIEW_DESCRIPTION + "=" + "'"+cardViewDescription+"'",null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()) {
             DetailListViewItem detailListViewItem = new DetailListViewItem();

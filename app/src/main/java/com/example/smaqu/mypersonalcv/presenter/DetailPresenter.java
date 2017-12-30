@@ -28,7 +28,7 @@ public class DetailPresenter implements DetailPresenterInterface {
 
     @Override
     public void createAdapter(Context context, Bundle bundle) {
-        ListViewAdapterDetailActivity listViewAdapterDetailActivity = new ListViewAdapterDetailActivity(context,databaseHelper.getListViewList(bundle.getString(BUNDLE_DESCRIPTION)));
+        ListViewAdapterDetailActivity listViewAdapterDetailActivity = new ListViewAdapterDetailActivity(context, databaseHelper.getListViewList(bundle.getString(BUNDLE_DESCRIPTION)));
         detailView.createListView(listViewAdapterDetailActivity);
     }
 

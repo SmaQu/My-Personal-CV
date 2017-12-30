@@ -53,14 +53,13 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.action_about_me:
+                mainPresenter.openAboutMe(this);
                 break;
             case R.id.action_about_application:
+                mainPresenter.openAboutApp(this);
                 break;
-            case R.id.action_license:
-                break;
-
         }
         return super.onOptionsItemSelected(item);
     }

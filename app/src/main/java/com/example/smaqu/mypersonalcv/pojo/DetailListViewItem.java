@@ -51,4 +51,3 @@ public class DetailListViewItem {
         this.date = date;
     }
 }
-

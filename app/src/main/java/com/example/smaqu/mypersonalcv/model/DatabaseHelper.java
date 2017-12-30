@@ -47,35 +47,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String KEY_LIST_VIEW_TABLE_DATE = "date";
 
     public DatabaseHelper(Context context) {
-        super(context,DB_NAME, null, DB_VERSION);
+        super(context, DB_NAME, null, DB_VERSION);
         this.context = context;
         DB_PATH = context.getApplicationContext().getFilesDir().getPath() + DB_NAME;
     }
 
     public void createDatabase() {
-        if(!databaseExists()) {
+        if (!databaseExists()) {
             getReadableDatabase();
             //Copy database
             try {
                 copyDatabase();
             } catch (IOException e) {
-                Log.e(TAG,"Cannot copy database");
+                Log.e(TAG, "Cannot copy database");
                 e.printStackTrace();
             }
         }
     }
 
-    public List<CardViewItem> getCardViewList(){
+    public List<CardViewItem> getCardViewList() {
         List<CardViewItem> cardViewItemList = new ArrayList<>();
         try {
             openDatabase();
         } catch (SQLException e) {
-            Log.e(TAG,"Cannot open database!");
+            Log.e(TAG, "Cannot open database!");
             e.printStackTrace();
         }
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + DB_CARD_TABLE,null);
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + DB_CARD_TABLE, null);
         cursor.moveToFirst();
-        while(!cursor.isAfterLast()) {
+        while (!cursor.isAfterLast()) {
             CardViewItem cardViewItem = new CardViewItem();
             cardViewItem.setDescription(cursor.getString(cursor.getColumnIndex(KEY_CARD_VIEW_TABLE_DESCRIPTION)));
             cardViewItem.setImage(cursor.getString(cursor.getColumnIndex(KEY_CARD_VIEW_TABLE_PHOTO)));
@@ -87,17 +87,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cardViewItemList;
     }
 
-    public List<DetailListViewItem> getListViewList(String cardViewDescription){
+    public List<DetailListViewItem> getListViewList(String cardViewDescription) {
         List<DetailListViewItem> listViewItemList = new ArrayList<>();
         try {
             openDatabase();
         } catch (SQLException e) {
-            Log.e(TAG,"Cannot open database!");
+            Log.e(TAG, "Cannot open database!");
             e.printStackTrace();
         }
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+ DB_LIST_TABLE + " WHERE " + KEY_LIST_VIEW_TABLE_CARD_VIEW_DESCRIPTION + "=" + "'"+cardViewDescription+"'",null);
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + DB_LIST_TABLE + " WHERE " + KEY_LIST_VIEW_TABLE_CARD_VIEW_DESCRIPTION + "=" + "'" + cardViewDescription + "'", null);
         cursor.moveToFirst();
-        while(!cursor.isAfterLast()) {
+        while (!cursor.isAfterLast()) {
             DetailListViewItem detailListViewItem = new DetailListViewItem();
             detailListViewItem.setCardViewDescription(cursor.getString(cursor.getColumnIndex(KEY_LIST_VIEW_TABLE_CARD_VIEW_DESCRIPTION)));
             detailListViewItem.setTopic(cursor.getString(cursor.getColumnIndex(KEY_LIST_VIEW_TABLE_TOPIC)));
@@ -119,7 +119,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         byte[] buffer = new byte[1024];
         int length;
-        while ((length = inputStream.read(buffer))>0){
+        while ((length = inputStream.read(buffer)) > 0) {
             outputStream.write(buffer, 0, length);
         }
         outputStream.flush();
@@ -133,10 +133,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void openDatabase() throws SQLException {
-        if(sqLiteDatabase != null && sqLiteDatabase.isOpen()){
+        if (sqLiteDatabase != null && sqLiteDatabase.isOpen()) {
             return;
         }
-        sqLiteDatabase = SQLiteDatabase.openDatabase(DB_PATH,null,SQLiteDatabase.OPEN_READONLY);
+        sqLiteDatabase = SQLiteDatabase.openDatabase(DB_PATH, null, SQLiteDatabase.OPEN_READONLY);
     }
 
     private void closeDatabase() {

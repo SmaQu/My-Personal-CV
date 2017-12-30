@@ -46,16 +46,16 @@ public class ListViewAdapterDetailActivity extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder viewHolder;
 
-        if(view == null) {
-            view = LayoutInflater.from(context).inflate(R.layout.list_view_item, viewGroup,false);
+        if (view == null) {
+            view = LayoutInflater.from(context).inflate(R.layout.list_view_item, viewGroup, false);
             viewHolder = new ViewHolder(view);
             view.setTag(viewHolder);
-        }else {
+        } else {
             viewHolder = (ViewHolder) view.getTag();
         }
 
         DetailListViewItem detailListViewItem = getItem(i);
-        viewHolder.imageView.setImageResource(context.getResources().getIdentifier(detailListViewItem.getIco(),"drawable",context.getPackageName()));
+        viewHolder.imageView.setImageResource(context.getResources().getIdentifier(detailListViewItem.getIco(), "drawable", context.getPackageName()));
         viewHolder.topic.setText(detailListViewItem.getTopic());
         viewHolder.info.setText(detailListViewItem.getInfo());
         viewHolder.date.setText(detailListViewItem.getDate());

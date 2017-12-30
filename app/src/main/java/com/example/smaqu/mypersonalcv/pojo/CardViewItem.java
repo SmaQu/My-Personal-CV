@@ -1,7 +1,5 @@
 package com.example.smaqu.mypersonalcv.pojo;
 
-import java.util.List;
-
 /**
  * Created by SmaQu on 2017-12-22.
  */

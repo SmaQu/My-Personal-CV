@@ -11,4 +11,8 @@ public interface MainPresenterInterface {
     void createAdapter();
 
     void openDialer(Context context);
+
+    void openAboutApp(Context context);
+
+    void openAboutMe(Context context);
 }

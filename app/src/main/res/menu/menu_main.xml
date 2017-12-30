@@ -12,9 +12,4 @@
         android:orderInCategory="101"
         android:title="@string/action_about_application"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/action_license"
-        android:orderInCategory="102"
-        android:title="@string/action_license"
-        app:showAsAction="never" />
 </menu>

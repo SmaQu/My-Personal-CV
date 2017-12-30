@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.smaqu.mypersonalcv.view.DetailActivity"
-    tools:showIn="@layout/activity_detail"
-    android:layout_marginStart="16dp"
-    android:layout_marginEnd="16dp"
-    android:layout_marginTop="8dp">
+    tools:showIn="@layout/activity_detail">
 
     <ListView
         android:id="@+id/list_view_content_main"
@@ -18,4 +18,3 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 </RelativeLayout>
-

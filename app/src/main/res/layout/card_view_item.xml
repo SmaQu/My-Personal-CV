@@ -19,7 +19,7 @@
             android:adjustViewBounds="true"
             android:scaleType="fitStart"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/testing_photo" />
+            tools:src="@drawable/testing_photo2" />
 
         <TextView
             android:id="@+id/text_view_card_view_item_desc"

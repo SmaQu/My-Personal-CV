@@ -57,8 +57,16 @@ public class ListViewAdapterDetailActivity extends BaseAdapter {
         DetailListViewItem detailListViewItem = getItem(i);
         viewHolder.imageView.setImageResource(context.getResources().getIdentifier(detailListViewItem.getIco(), "drawable", context.getPackageName()));
         viewHolder.topic.setText(detailListViewItem.getTopic());
+
         viewHolder.info.setText(detailListViewItem.getInfo());
+        if(viewHolder.info.getText().equals("")){
+            viewHolder.info.setVisibility(View.GONE);
+        }
+
         viewHolder.date.setText(detailListViewItem.getDate());
+        if(viewHolder.date.getText().equals("")){
+            viewHolder.date.setVisibility(View.GONE);
+        }
         return view;
     }
 

@@ -1,8 +1,7 @@
 package com.example.smaqu.mypersonalcv.presenter;
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import com.example.smaqu.mypersonalcv.adapter.ListViewAdapterDetailActivity;
@@ -28,14 +27,13 @@ public class DetailPresenter implements DetailPresenterInterface {
 
     @Override
     public void createAdapter(Context context, Bundle bundle) {
-        ListViewAdapterDetailActivity listViewAdapterDetailActivity = new ListViewAdapterDetailActivity(context, databaseHelper.getListViewList(bundle.getString(BUNDLE_DESCRIPTION)));
+        String description = bundle.getString(BUNDLE_DESCRIPTION);
+        changeToolbarTitle(context, description);
+        ListViewAdapterDetailActivity listViewAdapterDetailActivity = new ListViewAdapterDetailActivity(context, databaseHelper.getListViewList(description));
         detailView.createListView(listViewAdapterDetailActivity);
     }
 
-    @Override
-    public void openDialer(Context context) {
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:" + "123456789"));
-        context.startActivity(intent);
+    private void changeToolbarTitle(Context context, String title) {
+        ((Activity) context).setTitle(title);
     }
 }

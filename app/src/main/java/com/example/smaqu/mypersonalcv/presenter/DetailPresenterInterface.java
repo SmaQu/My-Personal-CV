@@ -10,6 +10,4 @@ import android.os.Bundle;
 public interface DetailPresenterInterface {
 
     void createAdapter(Context context, Bundle bundle);
-
-    void openDialer(Context context);
 }

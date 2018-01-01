@@ -1,10 +1,8 @@
 package com.example.smaqu.mypersonalcv.view;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ListView;
 
 import com.example.smaqu.mypersonalcv.R;
@@ -23,17 +21,10 @@ public class DetailActivity extends AppCompatActivity implements DetailActivityI
         setContentView(R.layout.activity_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                detailPresenter.openDialer(view.getContext());
-            }
-        });
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         detailPresenter = new DetailPresenter(this);
-        detailPresenter.createAdapter(this,getIntent().getBundleExtra(BUNDLE_EXTRAS));
+        detailPresenter.createAdapter(this, getIntent().getBundleExtra(BUNDLE_EXTRAS));
     }
 
     @Override

@@ -30,8 +30,9 @@
             android:gravity="center_vertical"
             android:paddingEnd="4dp"
             android:paddingStart="4dp"
-            android:text="TextVssssd d aassssssssss assssssdsd adas sssssssss sdassssssdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasds d as"
-            android:textStyle="bold" />
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="Text Text TextText Text Text TextText Text Text TextTextText Text TextText " />
 
     </RelativeLayout>
 
@@ -41,10 +42,11 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/relative_layout_topic_icon"
         android:layout_below="@+id/relative_layout_topic_icon"
-        android:padding="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Textasdasd asd asd asd asd asd asd asd asd asd asd asd a dasds ad asd asd asdasdasdasdasdasd asdasdasd asdasdasd asdsdsakdasf asdheksaduas djasdas0daksd asdjas dajsdnasd ajsd asdja dajsdaskdansdkasdnaskdnaskdasndaks  jkasdjdkasdja askd asdk aView" />
+        android:layout_marginStart="8dp"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        tools:text="Text TextText TextText  TextText Text Text Text TextTextText Text TextText" />
 
     <TextView
         android:id="@+id/text_view_list_view_item_date"
@@ -53,5 +55,6 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@id/text_view_list_view_item_info"
         android:padding="8dp"
-        android:text="20.12.2017" />
+        tools:text="20.12.2017" />
+
 </RelativeLayout>

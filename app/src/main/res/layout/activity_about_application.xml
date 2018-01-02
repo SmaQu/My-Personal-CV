@@ -8,5 +8,5 @@
     <WebView
         android:id="@+id/web_view_activity_about_application"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 </android.support.constraint.ConstraintLayout>

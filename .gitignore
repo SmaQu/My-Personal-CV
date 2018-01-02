@@ -9,3 +9,4 @@
 .externalNativeBuild
 /app/src/main/assets/datas.db
 /app/src/main/assets/AboutApp.html
+/app/src/main/res/values/about_strings.xml

@@ -18,12 +18,12 @@
                 android:id="@+id/text_view_activity_about_me_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="12dp"
-                android:paddingStart="12dp"
-                android:paddingTop="9dp"
+                android:paddingEnd="@dimen/default_padding"
+                android:paddingStart="@dimen/default_padding"
+                android:paddingTop="@dimen/small_padding"
                 android:text="@string/name"
                 android:textColor="@android:color/black"
-                android:textSize="24sp"
+                android:textSize="@dimen/double_text_size"
                 android:textStyle="bold" />
 
             <TextView
@@ -31,9 +31,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_view_activity_about_me_name"
-                android:textSize="16sp"
-                android:paddingEnd="12dp"
-                android:paddingStart="12dp"
+                android:textSize="@dimen/big_default_text_size"
+                android:paddingEnd="@dimen/default_padding"
+                android:paddingStart="@dimen/default_padding"
                 android:text="@string/profession"
                 android:textColor="@android:color/black" />
 
@@ -43,9 +43,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_view_activity_about_me_profession"
                 android:gravity="start"
-                android:paddingEnd="12dp"
-                android:paddingStart="12dp"
-                android:paddingTop="12dp"
+                android:paddingEnd="@dimen/default_padding"
+                android:paddingStart="@dimen/default_padding"
+                android:paddingTop="@dimen/default_padding"
                 android:text="@string/about_me"
                 android:textColor="@android:color/black"
                 tools:text="TextView" />
@@ -55,10 +55,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_view_activity_about_me_about_me"
-                android:paddingBottom="36dp"
-                android:paddingEnd="9dp"
-                android:paddingStart="9dp"
-                android:paddingTop="36dp"
+                android:paddingBottom="@dimen/double_default_padding"
+                android:paddingEnd="@dimen/small_padding"
+                android:paddingStart="@dimen/small_padding"
+                android:paddingTop="@dimen/triple_default_padding"
                 android:text="@string/signature"
                 android:textColor="@android:color/black"
                 tools:text="TextView" />

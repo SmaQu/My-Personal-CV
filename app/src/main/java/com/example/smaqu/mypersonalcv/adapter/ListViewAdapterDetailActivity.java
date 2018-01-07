@@ -59,12 +59,12 @@ public class ListViewAdapterDetailActivity extends BaseAdapter {
         viewHolder.topic.setText(detailListViewItem.getTopic());
 
         viewHolder.info.setText(detailListViewItem.getInfo());
-        if(viewHolder.info.getText().equals("")){
+        if (viewHolder.info.getText().equals("")) {
             viewHolder.info.setVisibility(View.GONE);
         }
 
         viewHolder.date.setText(detailListViewItem.getDate());
-        if(viewHolder.date.getText().equals("")){
+        if (viewHolder.date.getText().equals("")) {
             viewHolder.date.setVisibility(View.GONE);
         }
         return view;

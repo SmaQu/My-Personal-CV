@@ -11,11 +11,11 @@
 
         <ImageView
             android:id="@+id/image_view_list_view_item_icon"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="@dimen/triple_default_padding"
+            android:layout_height="@dimen/triple_default_padding"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/double_ultra_small_padding"
             android:src="@android:drawable/ic_lock_idle_alarm"
             tools:ignore="ContentDescription" />
 
@@ -25,11 +25,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/small_padding"
             android:layout_toEndOf="@+id/image_view_list_view_item_icon"
             android:gravity="center_vertical"
-            android:paddingEnd="4dp"
-            android:paddingStart="4dp"
+            android:paddingEnd="@dimen/ultra_small_padding"
+            android:paddingStart="@dimen/ultra_small_padding"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             tools:text="Text Text TextText Text Text TextText Text Text TextTextText Text TextText " />
@@ -42,9 +42,9 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/relative_layout_topic_icon"
         android:layout_below="@+id/relative_layout_topic_icon"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:padding="8dp"
+        android:layout_marginEnd="@dimen/double_ultra_small_padding"
+        android:layout_marginStart="@dimen/double_ultra_small_padding"
+        android:padding="@dimen/double_ultra_small_padding"
         android:textColor="@android:color/black"
         tools:text="Text TextText TextText  TextText Text Text Text TextTextText Text TextText" />
 
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/text_view_list_view_item_info"
-        android:padding="8dp"
+        android:padding="@dimen/double_ultra_small_padding"
         tools:text="20.12.2017" />
 
 </RelativeLayout>

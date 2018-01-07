@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.smaqu.mypersonalcv.R;
 import com.example.smaqu.mypersonalcv.adapter.CardViewAdapterMainActivity;
 import com.example.smaqu.mypersonalcv.model.DatabaseHelper;
 import com.example.smaqu.mypersonalcv.pojo.CardViewItem;
@@ -44,7 +45,7 @@ public class MainPresenter implements MainPresenterInterface, CardViewAdapterMai
     @Override
     public void openDialer(Context context) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:" + "123456789"));
+        intent.setData(Uri.parse("tel:" + context.getResources().getString(R.string.phone_number)));
         context.startActivity(intent);
     }
 

@@ -11,7 +11,6 @@ import com.example.smaqu.mypersonalcv.R;
 
 public class AboutMeActivity extends AppCompatActivity {
 
-    //TODO Links to gmail, and web
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

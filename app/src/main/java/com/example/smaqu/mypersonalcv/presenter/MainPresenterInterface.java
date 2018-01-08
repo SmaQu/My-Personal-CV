@@ -8,7 +8,7 @@ import android.content.Context;
 
 public interface MainPresenterInterface {
 
-    void createAdapter();
+    void createAdapter(Context context);
 
     void openDialer(Context context);
 

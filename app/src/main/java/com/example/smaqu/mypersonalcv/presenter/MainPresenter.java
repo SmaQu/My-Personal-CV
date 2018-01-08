@@ -36,8 +36,8 @@ public class MainPresenter implements MainPresenterInterface, CardViewAdapterMai
     }
 
     @Override
-    public void createAdapter() {
-        CardViewAdapterMainActivity adapter = new CardViewAdapterMainActivity(cardViewItemList);
+    public void createAdapter(Context context) {
+        CardViewAdapterMainActivity adapter = new CardViewAdapterMainActivity(context,cardViewItemList);
         adapter.setOnItemCallback(this);
         mainView.createRecyclerView(adapter);
     }

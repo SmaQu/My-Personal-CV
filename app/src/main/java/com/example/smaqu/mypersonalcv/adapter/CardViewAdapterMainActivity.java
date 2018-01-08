@@ -1,5 +1,6 @@
 package com.example.smaqu.mypersonalcv.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +20,11 @@ import java.util.List;
 public class CardViewAdapterMainActivity extends RecyclerView.Adapter {
 
     private OnClickCallback onClickCallback;
+    private Context context;
     private final List<CardViewItem> listOfElements;
 
-    public CardViewAdapterMainActivity(List<CardViewItem> listOfElements) {
+    public CardViewAdapterMainActivity(Context context, List<CardViewItem> listOfElements) {
+        this.context = context;
         this.listOfElements = listOfElements;
     }
 
@@ -42,8 +45,7 @@ public class CardViewAdapterMainActivity extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         CardViewItem cardViewItem = listOfElements.get(position);
-        //((MyViewHolder) holder).image.setImageResource(context.getResources().getIdentifier(cardViewItem.getImage(),"drawable",context.getPackageName()));
-        ((MyViewHolder) holder).image.setImageResource(R.drawable.testing_photo2);
+        ((MyViewHolder) holder).image.setImageResource(context.getResources().getIdentifier(cardViewItem.getImage(),"drawable",context.getPackageName()));
         ((MyViewHolder) holder).description.setText(cardViewItem.getDescription());
     }
 

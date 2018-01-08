@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
         });
 
         mainPresenter = new MainPresenter(this);
-        mainPresenter.createAdapter();
+        mainPresenter.createAdapter(getApplicationContext());
     }
 
     @Override

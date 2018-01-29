@@ -1,4 +1,4 @@
-package com.example.smaqu.mypersonalcv.model;
+package com.application.smaqu.personalcv.model;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.example.smaqu.mypersonalcv.pojo.CardViewItem;
-import com.example.smaqu.mypersonalcv.pojo.DetailListViewItem;
+import com.application.smaqu.personalcv.pojo.CardViewItem;
+import com.application.smaqu.personalcv.pojo.DetailListViewItem;
 
 import java.io.File;
 import java.io.FileOutputStream;

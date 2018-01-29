@@ -1,4 +1,4 @@
-package com.example.smaqu.mypersonalcv.presenter;
+package com.application.smaqu.personalcv.presenter;
 
 import android.content.Context;
 import android.os.Bundle;

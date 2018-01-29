@@ -1,4 +1,4 @@
-package com.example.smaqu.mypersonalcv.pojo;
+package com.application.smaqu.personalcv.pojo;
 
 /**
  * Created by SmaQu on 2017-12-22.

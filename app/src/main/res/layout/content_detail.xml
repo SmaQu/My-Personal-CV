@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/small_padding"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.smaqu.mypersonalcv.view.DetailActivity"
+    tools:context="com.application.smaqu.personalcv.view.DetailActivity"
     tools:showIn="@layout/activity_detail">
 
     <ListView

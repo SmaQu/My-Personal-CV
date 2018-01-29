@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.smaqu.mypersonalcv.view.AboutApplicationActivity">
+    tools:context="com.application.smaqu.personalcv.view.AboutApplicationActivity">
 
     <WebView
         android:id="@+id/web_view_activity_about_application"

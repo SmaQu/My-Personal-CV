@@ -1,4 +1,4 @@
-package com.example.smaqu.mypersonalcv;
+package com.application.smaqu.personalcv;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

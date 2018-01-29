@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Curriculum Vitae</string>
+    <string name="app_name">Portfolio</string>
     <string name="action_about_me">About me</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="action_about_application">About application</string>

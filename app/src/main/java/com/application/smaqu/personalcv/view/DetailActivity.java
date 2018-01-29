@@ -1,15 +1,15 @@
-package com.example.smaqu.mypersonalcv.view;
+package com.application.smaqu.personalcv.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 
-import com.example.smaqu.mypersonalcv.R;
-import com.example.smaqu.mypersonalcv.adapter.ListViewAdapterDetailActivity;
-import com.example.smaqu.mypersonalcv.presenter.DetailPresenter;
+import com.application.smaqu.personalcv.R;
+import com.application.smaqu.personalcv.adapter.ListViewAdapterDetailActivity;
+import com.application.smaqu.personalcv.presenter.DetailPresenter;
 
-import static com.example.smaqu.mypersonalcv.presenter.MainPresenter.BUNDLE_EXTRAS;
+import static com.application.smaqu.personalcv.presenter.MainPresenter.BUNDLE_EXTRAS;
 
 public class DetailActivity extends AppCompatActivity implements DetailActivityInterface {
 

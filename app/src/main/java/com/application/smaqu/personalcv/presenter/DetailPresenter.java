@@ -1,14 +1,14 @@
-package com.example.smaqu.mypersonalcv.presenter;
+package com.application.smaqu.personalcv.presenter;
 
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.example.smaqu.mypersonalcv.adapter.ListViewAdapterDetailActivity;
-import com.example.smaqu.mypersonalcv.model.DatabaseHelper;
-import com.example.smaqu.mypersonalcv.view.DetailActivityInterface;
+import com.application.smaqu.personalcv.adapter.ListViewAdapterDetailActivity;
+import com.application.smaqu.personalcv.model.DatabaseHelper;
+import com.application.smaqu.personalcv.view.DetailActivityInterface;
 
-import static com.example.smaqu.mypersonalcv.presenter.MainPresenter.BUNDLE_DESCRIPTION;
+import static com.application.smaqu.personalcv.presenter.MainPresenter.BUNDLE_DESCRIPTION;
 
 /**
  * Created by SmaQu on 2017-12-23.

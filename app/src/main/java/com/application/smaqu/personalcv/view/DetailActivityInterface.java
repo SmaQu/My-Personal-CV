@@ -1,6 +1,6 @@
-package com.example.smaqu.mypersonalcv.view;
+package com.application.smaqu.personalcv.view;
 
-import com.example.smaqu.mypersonalcv.adapter.ListViewAdapterDetailActivity;
+import com.application.smaqu.personalcv.adapter.ListViewAdapterDetailActivity;
 
 /**
  * Created by SmaQu on 2017-12-23.

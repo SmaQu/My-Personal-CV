@@ -1,10 +1,10 @@
-package com.example.smaqu.mypersonalcv.view;
+package com.application.smaqu.personalcv.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebView;
 
-import com.example.smaqu.mypersonalcv.R;
+import com.application.smaqu.personalcv.R;
 
 public class AboutApplicationActivity extends AppCompatActivity {
 

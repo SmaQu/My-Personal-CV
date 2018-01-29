@@ -1,4 +1,4 @@
-package com.example.smaqu.mypersonalcv.presenter;
+package com.application.smaqu.personalcv.presenter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,14 +6,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.smaqu.mypersonalcv.R;
-import com.example.smaqu.mypersonalcv.adapter.CardViewAdapterMainActivity;
-import com.example.smaqu.mypersonalcv.model.DatabaseHelper;
-import com.example.smaqu.mypersonalcv.pojo.CardViewItem;
-import com.example.smaqu.mypersonalcv.view.AboutApplicationActivity;
-import com.example.smaqu.mypersonalcv.view.AboutMeActivity;
-import com.example.smaqu.mypersonalcv.view.DetailActivity;
-import com.example.smaqu.mypersonalcv.view.MainActivityInterface;
+import com.application.smaqu.personalcv.R;
+import com.application.smaqu.personalcv.adapter.CardViewAdapterMainActivity;
+import com.application.smaqu.personalcv.model.DatabaseHelper;
+import com.application.smaqu.personalcv.pojo.CardViewItem;
+import com.application.smaqu.personalcv.view.AboutApplicationActivity;
+import com.application.smaqu.personalcv.view.AboutMeActivity;
+import com.application.smaqu.personalcv.view.DetailActivity;
+import com.application.smaqu.personalcv.view.MainActivityInterface;
 
 import java.util.List;
 

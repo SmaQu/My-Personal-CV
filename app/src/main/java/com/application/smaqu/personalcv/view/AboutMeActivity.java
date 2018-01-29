@@ -1,4 +1,4 @@
-package com.example.smaqu.mypersonalcv.view;
+package com.application.smaqu.personalcv.view;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,7 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.example.smaqu.mypersonalcv.R;
+import com.application.smaqu.personalcv.R;
 
 public class AboutMeActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.smaqu.mypersonalcv;
+package com.application.smaqu.personalcv;
 
 import org.junit.Test;
 

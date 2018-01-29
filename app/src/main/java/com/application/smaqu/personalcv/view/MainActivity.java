@@ -1,4 +1,4 @@
-package com.example.smaqu.mypersonalcv.view;
+package com.application.smaqu.personalcv.view;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,9 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.smaqu.mypersonalcv.R;
-import com.example.smaqu.mypersonalcv.adapter.CardViewAdapterMainActivity;
-import com.example.smaqu.mypersonalcv.presenter.MainPresenter;
+import com.application.smaqu.personalcv.R;
+import com.application.smaqu.personalcv.adapter.CardViewAdapterMainActivity;
+import com.application.smaqu.personalcv.presenter.MainPresenter;
 
 public class MainActivity extends AppCompatActivity implements MainActivityInterface {
 

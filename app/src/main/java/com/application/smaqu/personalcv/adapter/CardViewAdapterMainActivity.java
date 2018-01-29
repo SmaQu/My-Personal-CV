@@ -1,4 +1,4 @@
-package com.example.smaqu.mypersonalcv.adapter;
+package com.application.smaqu.personalcv.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.smaqu.mypersonalcv.R;
-import com.example.smaqu.mypersonalcv.pojo.CardViewItem;
+import com.application.smaqu.personalcv.R;
+import com.application.smaqu.personalcv.pojo.CardViewItem;
 
 import java.util.List;
 
